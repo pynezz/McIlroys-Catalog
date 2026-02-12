@@ -45,7 +45,7 @@ const levelColors = [
   <!-- Header -->
   <div class="header">
     <div class="subtitle">
-      Standard Catalogue of Software Components - Rev. 2025
+      Standard Catalogue of Software Components - Rev. 2026
     </div>
     <h1>McIlroy's Catalog</h1>
     <p class="description">
@@ -246,6 +246,6 @@ const levelColors = [
   <div class="footer">
     <span>"What I have just asked for is simply industrialism." - McIlroy, 1968</span>
     <span>Catalog Rev. 2026.02</span>
-    <span><a class="detail-meta" href="https://github.com/pynezz/mcilroys-catalog">github</a></span>
+    <span><a class="detail-meta" href="https://github.com/pynezz/McIlroys-Catalog">github</a></span>
   </div>
 </div>
