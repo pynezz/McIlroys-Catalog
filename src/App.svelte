@@ -1,6 +1,7 @@
 <script>
 import './catalog.css';
 import { data } from './data.js';
+import { generateIcon } from './icons.js';
 
 const { CLASSIFICATIONS, CATEGORIES, COMPONENTS } = data;
 
@@ -44,11 +45,11 @@ const levelColors = [
   <!-- Header -->
   <div class="header">
     <div class="subtitle">
-      Standard Catalogue of Software Components — Rev. 2025
+      Standard Catalogue of Software Components - Rev. 2025
     </div>
     <h1>McIlroy's Catalog</h1>
     <p class="description">
-      Components classified by precision, robustness, time-space performance, size limits, and binding time of parameters — as specified by M. Douglas McIlroy at the NATO Software Engineering Conference, Garmisch, October 1968.
+      Components classified by precision, robustness, time-space performance, size limits, and binding time of parameters - as specified by M. Douglas McIlroy at the NATO Software Engineering Conference, Garmisch, October 1968.
     </p>
 
     <!-- Epigraph -->
@@ -56,7 +57,7 @@ const levelColors = [
       <p class="quote">
         "I would like to see standard catalogues of routines, classified by precision, robustness, time-space performance, size limits, and binding time of parameters."
       </p>
-      <p class="attribution">— M. D. McIlroy, 1968</p>
+      <p class="attribution">- M. D. McIlroy, 1968</p>
     </div>
   </div>
 
@@ -131,12 +132,15 @@ const levelColors = [
           <button class="close-btn" onclick={() => selectedComponent = null}>✕ CLOSE</button>
 
           <div class="detail-header">
+            <div class="detail-icon" aria-hidden="true">
+              {@html generateIcon(selectedComp.id, selectedComp.name)}
+            </div>
             <div class="detail-title-row">
               <h2>{selectedComp.name}</h2>
               <span class="detail-ecosystem">{selectedComp.ecosystem}</span>
             </div>
             <div class="detail-meta">
-              {selectedComp.category} — {selectedComp.license}
+              {selectedComp.category} - {selectedComp.license}
             </div>
             <p class="detail-summary">{selectedComp.summary}</p>
           </div>
@@ -199,6 +203,9 @@ const levelColors = [
               <div class="card-indicator"></div>
             {/if}
             <div class="card-header">
+              <div class="card-icon" aria-hidden="true">
+                {@html generateIcon(comp.id, comp.name)}
+              </div>
               <div>
                 <span class="card-name">{comp.name}</span>
                 <span class="card-ecosystem">{comp.ecosystem}</span>
@@ -237,7 +244,8 @@ const levelColors = [
 
   <!-- Footer -->
   <div class="footer">
-    <span>"What I have just asked for is simply industrialism." — McIlroy, 1968</span>
-    <span>Catalog Rev. 2025.02</span>
+    <span>"What I have just asked for is simply industrialism." - McIlroy, 1968</span>
+    <span>Catalog Rev. 2026.02</span>
+    <span><a class="detail-meta" href="https://github.com/pynezz/mcilroys-catalog">github</a></span>
   </div>
 </div>
