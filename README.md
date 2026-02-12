@@ -3,6 +3,8 @@
 Doug McIlroy's catalog, a software component catalog focused on technical specifications and metrics of modern software.
 Today, it would be called something like 'a no-bullshit software component package registry'.
 
+![screenshot-1](assets/screenshot-1.png)
+
 ## Quick Start
 
 ```bash
@@ -39,8 +41,6 @@ I chose components that represent genuinely interchangeable options within their
 These offer different tradeoffs on exactly the axes McIlroy specified (RE2 and Rust regex trade expressiveness for guaranteed O(n) robustness, while ICU trades size for Unicode precision).
 
 The "Comparable Components" and "Portability & Transliteration" sections directly address his requirement that you should be able to "apply routines in the catalogue to any of a large class of often quite different machines", mapping each component to its equivalents across ecosystems.
-
-**Side note:** I have no idea how to implement the "binding time" dimension, so I left it out. If you have any ideas, you know what to do.
 
 ---
 
